@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'activeadmin', github: 'activeadmin'
+
 gem 'capistrano-rvm'
 gem 'capistrano',  '~> 3.1'
 gem 'capistrano-rails', '~> 1.1'
