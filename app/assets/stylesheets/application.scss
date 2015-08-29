@@ -12,4 +12,6 @@
  *
  *= require_self
  */
-@import "static_pages"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "static_pages";
