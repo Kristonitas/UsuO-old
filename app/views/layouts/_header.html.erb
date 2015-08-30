@@ -2,6 +2,15 @@
   <div class="navbar-inner">
     <div class="container">
       <%= link_to "usuo", root_path, id: "logo" %>
+
+      <% if student_signed_in? %>
+        <span class="greeting">Sveikas, Moksleivi!</span>
+      <% end %>
+
+      <% if orange_signed_in? %>
+        <span class="greeting">Sveikas, Oranžini!</span>
+      <% end %>
+
       <nav>
         
       </nav>
