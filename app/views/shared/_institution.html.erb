@@ -1,0 +1,6 @@
+<li id="<%= institution.id %>">
+  <%= link_to institution.title, institution %>
+  <% if institution.child_institutions.any? %>
+    <span>Dukterinių institucijų skaičius: <%= institution.child_institutions.count %></span>
+  <% end %>
+</li>

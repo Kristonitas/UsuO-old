@@ -1,0 +1,12 @@
+<% if @institution.parent_institution.present? %>
+  <h1><%= @institution.parent_institution.title %></h1>
+  <h3><%= @institution.title %></h3>
+<% else %>
+  <h1><%= @institution.title %></h1>
+<% end %>
+
+<div class="institution-description"><%= @institution.description %></div>
+
+<ol class="institution-list">
+  <%= render partial: 'shared/institution', collection: @institution.child_institutions %>
+</ol>
