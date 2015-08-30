@@ -1,19 +1,27 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "usuo", root_path, id: "logo" %>
+  <div class="container">
+    <%= link_to "usuo", root_path, id: "logo" %>
+    <nav class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
 
       <% if student_signed_in? %>
-        <span class="greeting">Sveikas, Moksleivi!</span>
+        <li class="greeting">Sveikas, Moksleivi!</li>
       <% end %>
 
       <% if orange_signed_in? %>
-        <span class="greeting">Sveikas, Oranžini!</span>
+        <li class="greeting">Sveikas, Oranžini!</li>
+      <% end %>
+      
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      <% if anyone_signed_in? %>
+        <li>
+          <%= link_to('Atsijungti', destroy_student_session_path, :method => :delete) %>
+        </li>
       <% end %>
 
-      <nav>
-        
-      </nav>
-    </div>
+      </ul>
+    </nav>
   </div>
 </header>
