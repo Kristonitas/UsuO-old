@@ -1,2 +1,8 @@
-<h1>UsuO</h1>
-<p>Pradinis UsuO puslapis</p>
+<% if !anyone_signed_in? %>
+  <div class="row">
+    <%= link_to 'UsuO Moksleiviams!', new_student_session_path, { class: "home-link" } %>
+  </div>
+  <div class="row">
+    <%= link_to 'UsuO Oranžiniams!', new_orange_session_path, { class: "home-link" } %>
+  </div>
+<% end %>

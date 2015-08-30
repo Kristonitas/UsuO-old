@@ -3,8 +3,8 @@ class Students::SessionsController < Devise::SessionsController
   before_action :check_login, only: [:new, :create]
 
   def check_login
-    if anyone_signed_in?
-      redirect_to root_url, alert: 'Jau esat prisijungę!'
+    if orange_signed_in?
+      redirect_to root_url, alert: 'Jau esat prisijungę kaip oranžinis!'
     end
   end
 

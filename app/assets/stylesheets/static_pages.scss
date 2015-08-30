@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #FFF8C6;
+.home-link {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  font-size: 2em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: black;
+  &:hover {
+    color: #444;
+    text-decoration: none;
+  }
 }
