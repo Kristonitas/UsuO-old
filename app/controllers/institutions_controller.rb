@@ -2,6 +2,13 @@ class InstitutionsController < ApplicationController
   def show
     @institution = Institution.find(params[:id])
     @institutions = @institution.child_institutions
-    @forms = @institution.forms if orange_signed_in?
+
+    if orange_signed_in?
+      @title = 'Moksleivių'
+      @forms = @institution.forms
+    elsif student_signed_in?
+      @title = 'Tavo'
+      @forms = @institution.forms.where(student_id: current_student.id)
+    end
   end
 end

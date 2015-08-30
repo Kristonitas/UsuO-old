@@ -21,6 +21,14 @@
     <%= f.text_area :info, class: "form-control" %>
   </div>
 
+
+  <% if @form.institution.present? %>
+    <div>
+      <%= f.label :institution, "Pasirinkta institucija" %>
+      <p><%= @form.institution.title %></p>
+    </div>
+  <% end %>
+
   <br/>
 
   <div class="actions">

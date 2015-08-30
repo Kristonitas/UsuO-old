@@ -30,6 +30,10 @@ class FormsController < ApplicationController
       return
     end
     @form = Form.new
+    if params[:institution_id].present?
+      @form.institution_id = params[:institution_id]
+      @institution = Institution.find(@form.institution_id)
+    end
   end
 
   # GET /forms/1/edit
@@ -103,7 +107,7 @@ class FormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_params
-      params[:form]
+      params[:form].permit(:title, :info)
     end
 
     def student_authorized?

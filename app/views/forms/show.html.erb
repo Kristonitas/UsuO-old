@@ -1,2 +1,20 @@
+<div>
+  <h4>Pavadinimas</h4>
+  <p><%= @form.title %><p>
+</div>
+
+<div>
+  <h4>Papildoma informacija</h4>
+  <p><%= @form.info %></p>
+</div>
+
+
+<% if @form.institution.present? %>
+  <div>
+    <h4>Pasirinkta institucija</h4>
+    <p><%= @form.institution.title %></p>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_form_path(@form) %> |
 <%= link_to 'Back', forms_path %>
