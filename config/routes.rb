@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'static_pages#home'
   
+  resources 'forms'
   get 'institutions/:id' => 'institutions#show', :as => :institution
   get 'home' => 'static_pages#home'
 

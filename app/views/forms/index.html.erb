@@ -1,0 +1,12 @@
+<% if @forms.any? %>
+  <h2><%= @title %> anketos:</h2>
+  <%= render 'shared/forms' %>
+<% else %>
+  <h2><%= @title %> anketų nėra.</h2>
+<% end %>
+
+<br>
+
+<% if student_signed_in? %>
+  <%= link_to 'New Form', new_form_path %>
+<% end %>
