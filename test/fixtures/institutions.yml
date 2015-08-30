@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  parent_institution_id: 1
+  description: MyText
+  homepage: MyString
+  priority: 1
+
+two:
+  title: MyString
+  parent_institution_id: 1
+  description: MyText
+  homepage: MyString
+  priority: 1
