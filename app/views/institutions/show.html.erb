@@ -7,6 +7,14 @@
 
 <div class="institution-description"><%= @institution.description %></div>
 
-<ol class="institution-list">
-  <%= render partial: 'shared/institution', collection: @institution.child_institutions %>
-</ol>
+
+<%= render 'shared/institutions' %>
+
+<% if orange_signed_in? %>
+  <% if @forms.any? %>
+    <h4>Moksleivių anketos:</h4>
+    <%= render 'shared/forms' %>
+  <% else %>
+    <h4>Moksleivių anketų nėra.</h4>
+  <% end %>
+<% end %>

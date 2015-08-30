@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_id: 1
+  institution_id: 1
+  program_id: 1
+  title: MyString
+  info: MyText
+  resolved: false
+
+two:
+  student_id: 1
+  institution_id: 1
+  program_id: 1
+  title: MyString
+  info: MyText
+  resolved: false
