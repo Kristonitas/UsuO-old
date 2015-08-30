@@ -41,13 +41,12 @@ body {
 
 #logo {
   float: left;
-  margin-right: 10px;
-  font-size: 2em;
+  font-size: 21px;
   color: white;
+  padding: 10px;
   padding-top: 9px;
   text-transform: uppercase;
   font-weight: bold;
-  line-height: 1;
   &:hover {
     color: white;
     text-decoration: none;

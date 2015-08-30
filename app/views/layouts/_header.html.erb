@@ -17,7 +17,10 @@
 
       <% if anyone_signed_in? %>
         <li>
-          <%= link_to('Atsijungti', destroy_student_session_path, :method => :delete) %>
+          <%= link_to('Nustatymai', edit_registration_path(current_user)) %>
+        </li>
+        <li>
+          <%= link_to('Atsijungti', destroy_session_path(current_user), :method => :delete) %>
         </li>
       <% end %>
 
