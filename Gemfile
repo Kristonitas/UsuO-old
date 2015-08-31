@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'quiet_assets', group: :development
 
 gem 'capistrano-rvm'
 gem 'capistrano',  '~> 3.1'
